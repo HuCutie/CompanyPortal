@@ -4,7 +4,6 @@ bootdo:
 logging:
   level:
     root: info
-    com.bootdo: debug
 
 spring:
   datasource:
