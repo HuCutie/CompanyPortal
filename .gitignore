@@ -64,3 +64,4 @@ fabric.properties
 
 # log
 applog
+src/main/resources/META-INF/additional-spring-configuration-metadata.json
