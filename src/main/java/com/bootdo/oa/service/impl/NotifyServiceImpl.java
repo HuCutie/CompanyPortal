@@ -2,8 +2,6 @@ package com.bootdo.oa.service.impl;
 
 import com.bootdo.system.domain.UserDO;
 import com.bootdo.system.service.SessionService;
-import org.apache.shiro.session.Session;
-import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,6 @@
 package com.bootdo.activiti.service.impl;
 
 import com.bootdo.activiti.config.ActivitiConstant;
-import com.bootdo.common.utils.StringUtils;
-import org.activiti.engine.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

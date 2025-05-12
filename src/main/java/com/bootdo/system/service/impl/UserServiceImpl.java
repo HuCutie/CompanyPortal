@@ -11,12 +11,7 @@ import com.bootdo.common.utils.*;
 import com.bootdo.system.service.DeptService;
 import com.bootdo.system.vo.UserVO;
 import org.apache.commons.lang.ArrayUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -47,8 +42,6 @@ public class UserServiceImpl implements UserService {
     private BootdoConfig bootdoConfig;
     @Autowired
     DeptService deptService;
-    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
-
     @Override
 //    @Cacheable(value = "user",key = "#id")
     public UserDO get(Long id) {
@@ -234,7 +227,7 @@ public class UserServiceImpl implements UserService {
             BufferedImage cutImage = ImageUtils.cutImage(file, x, y, w, h, prefix);
             BufferedImage rotateImage = ImageUtils.rotateImage(cutImage, r);
             ByteArrayOutputStream out = new ByteArrayOutputStream();
-            boolean flag = ImageIO.write(rotateImage, prefix, out);
+            ImageIO.write(rotateImage, prefix, out);
             //转换后存入数据库
             byte[] b = out.toByteArray();
             FileUtil.uploadFile(b, bootdoConfig.getUploadPath(), fileName);

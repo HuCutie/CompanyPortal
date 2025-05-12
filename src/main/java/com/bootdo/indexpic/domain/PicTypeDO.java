@@ -1,9 +1,6 @@
 package com.bootdo.indexpic.domain;
 
 import java.io.Serializable;
-import java.util.Date;
-
-
 
 /**
  * 首页轮播图片类型

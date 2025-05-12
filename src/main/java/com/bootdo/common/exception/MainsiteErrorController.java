@@ -2,24 +2,18 @@ package com.bootdo.common.exception;
 
 
 import com.bootdo.common.utils.R;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Map;
 
 @RestController
 public class MainsiteErrorController implements ErrorController {
-    private Logger logger = LoggerFactory.getLogger(getClass());
     private static final String ERROR_PATH = "/error";
 
     @Autowired
@@ -60,7 +54,6 @@ public class MainsiteErrorController implements ErrorController {
 
     @Override
     public String getErrorPath() {
-        // TODO Auto-generated method stub
         return ERROR_PATH;
     }
 }

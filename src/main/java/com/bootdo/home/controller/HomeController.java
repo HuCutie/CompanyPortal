@@ -1,12 +1,8 @@
 package com.bootdo.home.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.bootdo.article.domain.NewsDO;
 import com.bootdo.article.service.NewsService;
-import com.bootdo.common.utils.DateUtils;
 import com.bootdo.common.utils.GenUtils;
-import com.bootdo.common.utils.PageUtils;
-import com.bootdo.common.utils.Query;
 import com.bootdo.indexpic.domain.IndexPicDO;
 import com.bootdo.indexpic.service.IndexPicService;
 import com.bootdo.product.domain.ProductPicDO;
@@ -19,7 +15,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,17 +40,14 @@ public class HomeController {
 		Map<String, Object> params = SetParams(1, 3);
 		params.put("type", "news");
 		List<NewsDO> newsList = newsService.list(params);
-		int total1 = newsService.count(params);
 		// 查询公告列表数据
 		Map<String, Object> params1 = SetParams(1, 2);
 		params1.put("type", "announcement");
 		List<NewsDO> ggList = newsService.list(params1);
-		int total2 = newsService.count(params1);
 		// 查询资讯列表数据
 		Map<String, Object> params2 = SetParams(1, 3);
 		params2.put("type", "message");
 		List<NewsDO> zxList = newsService.list(params2);
-		int total3 = newsService.count(params2);
 		// 查询一条案例数据
 		Map<String, Object> params4 = SetParams(1, 1);
 		params4.put("type", "case");
@@ -89,17 +81,14 @@ public class HomeController {
 		Map<String, Object> params = SetParams(1, 3);
 		params.put("type", "news");
 		List<NewsDO> newsList = newsService.list(params);
-		int total1 = newsService.count(params);
 		// 查询公告列表数据
 		Map<String, Object> params1 = SetParams(1, 2);
 		params1.put("type", "announcement");
 		List<NewsDO> ggList = newsService.list(params1);
-		int total2 = newsService.count(params1);
 		// 查询资讯列表数据
 		Map<String, Object> params2 = SetParams(1, 3);
 		params2.put("type", "message");
 		List<NewsDO> zxList = newsService.list(params2);
-		int total3 = newsService.count(params2);
 		// 查询一条案例数据
 		Map<String, Object> params4 = SetParams(1, 1);
 		params4.put("type", "case");

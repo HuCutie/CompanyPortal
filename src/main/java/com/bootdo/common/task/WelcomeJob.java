@@ -9,8 +9,6 @@ import org.springframework.stereotype.Component;
 
 import com.bootdo.oa.domain.Response;
 
-import java.security.Principal;
-
 @Component
 public class WelcomeJob implements Job{
 	@Autowired

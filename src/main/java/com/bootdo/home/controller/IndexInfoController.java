@@ -4,13 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.bootdo.article.domain.NewsDO;
 import com.bootdo.article.service.NewsService;
 
-import com.bootdo.common.utils.PageUtils;
-import com.bootdo.common.utils.Query;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
