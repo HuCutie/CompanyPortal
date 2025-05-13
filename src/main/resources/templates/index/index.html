@@ -20,7 +20,7 @@
 </head>
 <body>
 <div class="header">
-  <div class="logo"><a href=""><img src="index/images/img/huamu.png" width="100%"/></a></div>
+  <div class="logo"><a href="https://www.dlut.edu.cn/xxgk/xxjj.htm"><img src="index/images/img/huamu.png" width="100%"/></a></div>
   <div class="nav">
     <ul>
       <li><a href="index.html" class="s1"></a></li>
@@ -34,14 +34,14 @@
    <img src="index/images/tell1.jpg" style="float: right;"/> </div>
 </div>
 <div class="siber_con">
-  <div class="notice">
+  <!-- <div class="notice">
     <ul>
       <li th:each="news : ${ggList}">
       <span th:text="${#dates.format(news.gtmCreate, 'yyyy-MM-dd')}">[2013/09/04]</span>
       <a th:href="'shownews.html?id='+${news.cid}" th:text="${news.title}">华钼科技官网正式上线</a>
       </li>
     </ul>
-  </div>
+  </div> -->
   <div class="onlie">
     <div class="o4"> <a href=""><img src="index/images/onlie_4.png" /></a></div>
     <div class="o3"> <a href=""><img src="index/images/onlie_3.png" /></a></div>
@@ -51,7 +51,7 @@
   <div class="index_about">
     <div class="title"><h1><img src="index/images/index_about_title.png" /></h1></div>
     <div class="index_about_con">
-      本公司成立于2009年，是一家软硬件集成服务提供商。2013年起，公司将主要发展方向定位为企业软件开发及互联网服务运营...
+      大连理工大学是中国共产党在新中国成立前夕，面向新中国工业体系建设亲手创办的第一所新型正规大学。
     </div>
     <div class="index_about_more"><a href="about.html"><img src="index/images/index_about_more.png" /></a></div>
   </div>
@@ -119,8 +119,8 @@
       <ul id="newsinfolist">
         <ul>
       <li th:each="news : ${newsList}">
-      <a th:href="'shownews.html?id='+${news.cid}" th:text="${news.title}">华钼科技官网正式上线</a>
-      <span th:text="${#dates.format(news.gtmCreate, 'yyyy-MM-dd')}">[2013/09/04]</span>
+      <a th:href="'shownews.html?id='+${news.cid}" th:text="${news.title}"></a>
+      <span th:text="${#dates.format(news.gtmCreate, 'yyyy-MM-dd')}"></span>
       </li>
        </ul>
       </ul>
@@ -139,7 +139,7 @@
             <h1><a th:href="'shownews.html?id='+${news.cid}"><img th:src="${news.pic}" width="70px" height="55px"/></a></h1>
             <dl>
               <dt><a th:href="'shownews.html?id='+${news.cid}" th:text="${news.title}">公司介绍</a></dt>
-             <dd th:href="'shownews.html?id='+${news.cid}" th:utext="${news.summary}">本公司成立于2009年，是一家软硬件集成服务提供商。2013年起，公司将主要发展方向定位为企业软件开发及互联网服务运营... </dd>
+             <dd th:href="'shownews.html?id='+${news.cid}" th:utext="${news.summary}">大连理工大学是中国共产党在新中国成立前夕，面向新中国工业体系建设亲手创办的第一所新型正规大学。 </dd>
             </dl>
           </div>
         </li>
@@ -158,8 +158,8 @@
           </div>
           <div class="case_text">
             <dl>
-              <dt th:text="'客户：'+${alinfo.title}">客户：成都国际铁路港</dt>
-              <dd th:text="'简述：'+${alinfo.summary}">简述：本案例是一套一体化综合服务平台…</dd>
+              <dt th:text="'客户：'+${alinfo.title}"></dt>
+              <dd th:text="'简述：'+${alinfo.summary}"></dd>
             </dl>
           </div>
         </div>
@@ -213,10 +213,10 @@ scrollPic_03.initialize(); //初始化
   <div class="foot">
     <ul>
       <li>友情链接：</li>
-     <li><a href="https://www.goodemall.com">一路全球跨境购</a></li>
+     <li><a href="https://github.com/HuCutie">作者主页</a></li>
     </ul>
-    <p>Copyright © 2018 成都华钼科技有限公司 All Rights Reserved       网站建设：成都华钼科技</p>
-    <p>联系电话：028-61666317　         公司地址：成都市金牛区光荣西路67号1幢309号    邮箱：service@goodemall.com</p>
+    <p>Copyright © 2025 文化有限公司 All Rights Reserved        网站建设：husmallcutie</p>
+    <p>联系电话：17681286402　         公司地址：辽宁最高学府    邮箱：husmallcutie@gmail.com</p>
   </div>
 </div>
 <!-- 新闻模板 -->
