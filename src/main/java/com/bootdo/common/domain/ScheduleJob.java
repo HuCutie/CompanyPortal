@@ -6,7 +6,6 @@ import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
-@SuppressWarnings("serial")
 public class ScheduleJob implements Serializable ,Job {
 
 	public static final String STATUS_RUNNING = "1";

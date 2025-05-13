@@ -76,7 +76,6 @@ public class JSONUtils {
 	 * @param json
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	public static Map<String, Object> jsonToMap(String json) {
 		if (StringUtils.isEmpty(json)) {
 			return null;

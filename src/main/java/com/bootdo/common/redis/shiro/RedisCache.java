@@ -97,7 +97,6 @@ public class RedisCache<K, V> implements Cache<K, V> {
                 return null;
             }else{
                 byte[] rawValue = cache.get(getByteKey(key));
-                @SuppressWarnings("unchecked")
                 V value = (V)SerializeUtils.deserialize(rawValue);
                 return value;
             }
@@ -150,7 +149,6 @@ public class RedisCache<K, V> implements Cache<K, V> {
         }
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public Set<K> keys() {
         try {
@@ -176,7 +174,6 @@ public class RedisCache<K, V> implements Cache<K, V> {
             if (!CollectionUtils.isEmpty(keys)) {
                 List<V> values = new ArrayList<V>(keys.size());
                 for (byte[] key : keys) {
-                    @SuppressWarnings("unchecked")
                     V value = get((K)key);
                     if (value != null) {
                         values.add(value);
