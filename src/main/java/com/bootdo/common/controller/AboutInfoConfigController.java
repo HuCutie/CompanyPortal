@@ -54,7 +54,8 @@ public class AboutInfoConfigController {
 	@PostMapping("/update")
 	R update(@RequestParam Map<String, Object> map) {
 		try {
-			PropertiesConfiguration conf = new PropertiesConfiguration("aboutus.properties");
+            Configuration config = GenUtils.getAboutConfig();		
+			PropertiesConfiguration conf = (PropertiesConfiguration) config;
 			String type=map.get("type").toString();
 			if (type.equals("1")) {
 				// 公司简介

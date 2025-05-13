@@ -163,7 +163,7 @@ public class GenUtils {
      */
     public static Configuration getConfig() {
         try {
-            return new PropertiesConfiguration("generator.properties");
+            return new PropertiesConfiguration("src/main/resources/aboutus.properties");
         } catch (ConfigurationException e) {
             throw new BDException("获取配置文件失败，", e);
         }
@@ -174,7 +174,7 @@ public class GenUtils {
      */
     public static Configuration getAboutConfig() {
         try {
-            return new PropertiesConfiguration("aboutus.properties");
+            return new PropertiesConfiguration("src/main/resources/aboutus.properties");
         } catch (ConfigurationException e) {
             throw new BDException("获取配置文件失败，", e);
         }
